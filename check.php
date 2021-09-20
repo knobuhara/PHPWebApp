@@ -28,7 +28,7 @@ try {
         exit();
     }
 } catch (\PDOException $th) {
-    echo "joinエラー　：".$e->getMessage();
+    echo "joinエラー　：".$th->getMessage();
 }
 
 ?>
