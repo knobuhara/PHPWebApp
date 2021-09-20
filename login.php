@@ -1,6 +1,6 @@
 <?php 
 require("./dbcon.php");
-//session_start();
+session_start();
  
 if (!empty($_POST)) {
     /* 入力情報の不備を検知 */
@@ -21,8 +21,8 @@ if (!empty($_POST)) {
     }
     /* ヒットすれば次のページへ */
     if(password_verify($_POST['password'], $record['password'])){
- //       $_SESSION['join'] = $_POST;   // フォームの内容をセッションで保存
-             header('Location: main.php');   // main.phpへ移動
+        $_SESSION['join'] = $_POST;   // フォームの内容をセッションで保存
+        header('Location: main.php');   // main.phpへ移動
     }else{
         echo "ログイン認証に失敗しました";
     }

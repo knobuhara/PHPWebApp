@@ -2,6 +2,17 @@
 require("./dbcon.php");
 session_start();
 
+/* 会員登録の手続き以外のアクセスを飛ばす */
+
+if (!isset($_SESSION['join'])) {
+    $alert = "不正アクセスです。登録画面に戻ります！";
+    $alert = "<script type='text/javascript'>alert('". $alert. "');</script>";
+    echo $alert;
+ //   header('Location: index.php');
+    print('<div><a href="./index.php">登録画面に戻る</a></div>');
+    exit();
+}
+
 try {
     $member = $db->prepare('SELECT * FROM member_tbl');
     $member->execute();
@@ -15,6 +26,7 @@ try {
     echo "DB接続エラー".$th->getMessage();
 }
 
+unset($_SESSION['join']);   // セッションを破棄
 ?>
 
 <!DOCTYPE html>

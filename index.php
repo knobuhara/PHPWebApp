@@ -45,8 +45,8 @@ if (!empty($_POST)) {
 <body>
     <div class="content">
         <form action="" method="POST">
-            <h1>アカウント作成</h1>
-            <p>当サービスをご利用するために、次のフォームに必要事項をご記入ください。</p>
+            <h1>宣原PHP登録システム　アカウント作成</h1>
+            <p>次のフォームに必要事項をご記入し、登録してください。</p>
             <br>
  
             <div class="text-primary">

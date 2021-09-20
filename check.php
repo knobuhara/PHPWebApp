@@ -4,7 +4,7 @@ session_start();
 
 /* 会員登録の手続き以外のアクセスを飛ばす */
 if (!isset($_SESSION['join'])) {
-    header('Location: entry.php');
+    header('Location: index.php');
     exit();
 }
 
@@ -24,7 +24,7 @@ try {
         ));
     
         unset($_SESSION['join']);   // セッションを破棄
-        header('Location: checksuccess.php');   // thank.phpへ移動
+        header('Location: checksuccess.php');   // checksuccess.phpへ移動
         exit();
     }
 } catch (\PDOException $th) {
