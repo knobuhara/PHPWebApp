@@ -4,10 +4,12 @@ php+bootstrap
 ## 初めてのPHPアプリを作成する
 
 ### 概要
-  ユーザー名、パスワード登録、認証
-  UIはbootstrap部品を使用
+  - ユーザー名、パスワード登録、認証
+  - UIはbootstrap部品を使用
+    - 学習中、一部適用済み
 #### 構成
   - index.php
-  - check.php
+  - userconfirm.php
   - checksuccess.php
   - login.php
+  - main.php
