@@ -1,5 +1,5 @@
 <?php 
-require("./dbcon.php");
+require_once("./dbcon.php");
 session_start();
  
 if (!empty($_POST)) {
@@ -13,7 +13,7 @@ if (!empty($_POST)) {
     
     /* メールアドレスの重複を検知 */
     if (!isset($error)) {
-        $member = $db->prepare('SELECT COUNT(*) as cnt FROM member_tbl WHERE email=?');
+        $member = dbConnect()->prepare('SELECT COUNT(*) as cnt FROM member_tbl WHERE email=?');
         $member->execute(array(
             $_POST['email']
         ));
@@ -26,7 +26,7 @@ if (!empty($_POST)) {
     /* エラーがなければ次のページへ */
     if (!isset($error)) {
         $_SESSION['join'] = $_POST;   // フォームの内容をセッションで保存
-        header('Location: check.php');   // check.phpへ移動
+        header('Location: userconfirm.php');   // check.phpへ移動
         exit();
     }
 }

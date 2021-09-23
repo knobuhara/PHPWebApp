@@ -14,7 +14,7 @@ if (!isset($_SESSION['join'])) {
 }
 
 try {
-    $member = $db->prepare('SELECT * FROM member_tbl');
+    $member = dbConnect()->prepare('SELECT * FROM member_tbl');
     $member->execute();
     //    $member->query('SELECT * FROM member_tbl');
         $row_cnt = $member->rowCount();
@@ -46,8 +46,8 @@ unset($_SESSION['join']);   // セッションを破棄
 <div class="content">
     <table class='table table-striped'>
     <tr class="table-success">
-        <td class="table-success">id</td>
-        <td class="table-success">name</td>
+        <td class="table-success">登録名</td>
+        <td class="table-success">Eメールアドレス</td>
     </tr>
  
     <?php 

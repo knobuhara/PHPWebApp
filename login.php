@@ -1,5 +1,5 @@
 <?php 
-require("./dbcon.php");
+require_once("./dbcon.php");
 session_start();
  
 if (!empty($_POST)) {
@@ -13,7 +13,7 @@ if (!empty($_POST)) {
     
     /* メールアドレスの重複を検知 */
     if (!isset($error)) {
-        $member = $db->prepare('SELECT * FROM member_tbl WHERE email=?');
+        $member = dbConnect()->prepare('SELECT * FROM member_tbl WHERE email=?');
         $member->execute(array(
             $_POST['email']
         ));
