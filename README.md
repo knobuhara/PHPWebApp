@@ -2,6 +2,7 @@
 php+bootstrap
 
 ## 初めてのPHPアプリを作成する
+  ### 公開URL：http://to-wer.co.jp/php/index.php
 
 ### 概要
   - ユーザー名、パスワード登録、認証
