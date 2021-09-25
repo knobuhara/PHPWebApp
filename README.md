@@ -14,3 +14,12 @@ php+bootstrap
   - checksuccess.php
   - login.php
   - main.php
+
+#### 残件
+  - BootstrapUI作成
+  - XSS対策
+    - htmlspecialcharsでエスケープ
+  - CSRF対策
+    - bin2hexでトークン生成
+
+#### LalavelフレームワークでWebアプリを作成
