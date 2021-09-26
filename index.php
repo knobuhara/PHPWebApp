@@ -65,11 +65,11 @@ if (!empty($_POST)) {
 <body>
 <div class="container">
     <h1>宣原PHP登録システム　アカウント作成</h1>
-    <p>次のフォームに必要事項をご記入し、登録してください。</p>
     <br>
     <div class="row">
         <div class="col-md-12">
             <div class="wrap">
+            <p class="bg-success text-center">次のフォームに必要事項をご記入し、登録してください。</p>
                 <p class="form-title">
                     アカウント作成</p>
                 <form class="login" action="" method="POST">
