@@ -34,44 +34,58 @@ if (!empty($_POST)) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-    <title>アカウント作成</title>
-    <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="css/style_bs.css"> 
+    <script src="./js/func.js"></script>
+
+    <title>ログイン</title>
 </head>
 <body>
-    <div class="content">
-        <form action="" method="POST">
-            <h1>ログイン</h1>
-            <p>次のフォームに必要事項をご記入し、ログインしてください。</p>
-            <br>
- 
-            <div class="control">
-                <label for="name">ユーザー名</label>
-                <input id="name" type="text" name="name">
-            </div>
- 
-            <div class="control">
-                <label for="email">メールアドレス<span class="required">必須</span></label>
-                <input id="email" type="email" name="email">
-                <?php if (!empty($error["email"]) && $error['email'] === 'blank'): ?>
-                    <p class="error">＊メールアドレスを入力してください</p>
-                <?php elseif (!empty($error["email"]) && $error['email'] === 'duplicate'): ?>
-                    <p class="error">＊このメールアドレスはすでに登録済みです</p>
-                <?php endif ?>
-            </div>
- 
-            <div class="control">
-                <label for="password">パスワード<span class="required">必須</span></label>
-                <input id="password" type="password" name="password">
-                <?php if (!empty($error["password"]) && $error['password'] === 'blank'): ?>
-                    <p class="error">＊パスワードを入力してください</p>
-                <?php endif ?>
-            </div>
- 
-            <div class="control">
-                <button type="submit" class="btn">ログイン</button>
-            </div>
-        </form>
-    </div>
+<div class="container">
+<h1>宣原PHP登録システム　ログイン</h1>
+<div class="row" style="margin-top:20px">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+		<form role="form" method="POST">
+			<fieldset>
+				<hr class="colorgraph">
+				<div class="form-group">
+                    <input type="text" name="name" id="name" class="form-control input-lg" placeholder="Username">
+				</div>
+				<div class="form-group">
+                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
+				</div>
+				<div class="form-group">
+                    <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
+				</div>
+<!--
+                <span class="button-checkbox">
+					<button type="button" class="btn" data-color="info">Remember Me</button>
+                    <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
+                    <a href="" class="btn btn-link pull-right">Forgot Password?</a>
+				</span>
+-->
+                <div class="remember-forgot">
+                    <div class="row">
+                        <div class="col-md-6 forgot-pass-content">
+                        <a href="" class="btn btn-link pull-right">Forgot Password?</a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="colorgraph">
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-6">
+                        <input type="submit" class="btn btn-lg btn-success btn-block" value="ログイン">
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6">
+						<a href="./index.php" class="btn btn-lg btn-primary btn-block">登録</a>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+</div>
 </body>
 </html>

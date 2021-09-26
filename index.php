@@ -50,16 +50,13 @@ if (!empty($_POST)) {
     <link rel="stylesheet" href="css/style_bs.css"> 
     -->
 
-    <link rel="stylesheet" href="css/style_bs.css"> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <!--
+    <link rel="stylesheet" href="css/style_bs.css"> 
     <script src="./js/func.js"></script>
-    -->
-<!------ Include the above in your HEAD tag ---------->
+
     <title>アカウント作成</title>
 </head>
 <body>
@@ -73,10 +70,12 @@ if (!empty($_POST)) {
                 <p class="form-title">
                     アカウント作成</p>
                 <form class="login" action="" method="POST">
+                <hr class="colorgraph">
                 <input type="text" name="name" placeholder="Username" />
                 <input type="email" name="email" placeholder="Email" />
                 <input type="password" name="password" placeholder="Password" />
                 <input type="submit" value="確認する" class="btn btn-success btn-sm" />
+                <hr class="colorgraph">
                 <br>
                 <br>
                 <div>
@@ -94,8 +93,5 @@ if (!empty($_POST)) {
         </div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
 </body>
 </html>
