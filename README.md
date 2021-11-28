@@ -2,6 +2,7 @@
 php+bootstrap
 
 ## 初めてのPHPアプリを作成する
+  ##### AWSのRoute53で公開URLのドメインルーティング設定完了：http://nobuhara.tk/PHPWebApp/index.php
   ##### 公開URL：~~http://to-wer.co.jp/php/index.php~~ http://54.212.121.191/PHPWebApp/index.php
   ##### 20211123 AWSでサーバを立て、トップページをデプロイしました！！
   ##### 20210926 Bootstrapでトップページをリニュアルしました！！
